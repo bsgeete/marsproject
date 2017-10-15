@@ -1,0 +1,14 @@
+Extended Exercise:
+Parsing Users using jq on windows
+1. Using amazon credential configure
+2. Run following command to view users (needs jq installation)
+aws iam list-users --output json|jq-win64 '.Users'
+
+This demo shows that using jq, json can be parse and reuse for configuration.
+
+Similarly powershell ConvertFrom-Json, ConvertTo-Json can be use for reading fields and processing.
+
+AWS commands for various format (from SVCC demo for various types of output)
+aws ec2 describe-instances --output json
+aws ec2 describe-instances --output table
+aws ec2 describe-instances --output text
